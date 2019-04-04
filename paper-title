@@ -1,0 +1,12 @@
+#!/bin/bash
+set -e
+set -o pipefail
+echo "Reading from clipboard"
+echo "== Input =="
+xclip -o -sel clipboard
+echo "==========="
+xclip -o -sel clipboard | node dist/cli.js | xclip -sel clipboard
+echo "== Output =="
+xclip -o -sel clipboard
+echo "============"
+echo "Saved to clipboard"
