@@ -16,7 +16,6 @@ Reading from clipboard
 == Input ==
 S TRONGER C ONSISTENCY AND S EMANTICS FOR
 L OW -L ATENCY G EO -R EPLICATED S TORAGE
-
 ===========
 == Output ==
 Stronger Consistency and Semantics for Low-Latency Geo-Replicated Storage

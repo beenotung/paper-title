@@ -4,7 +4,7 @@ import { convertTitle } from './core';
 
 console.log('Reading from clipboard');
 // let input = fs.readFileSync('/dev/stdin').toString();
-const input = clipboardy.readSync();
+const input = clipboardy.readSync().trim();
 const output = convertTitle(input);
 
 console.log('== Input ==');
