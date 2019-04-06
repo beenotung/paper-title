@@ -1,5 +1,4 @@
-import '@beenotung/tslib/';
-import { flatten } from '@beenotung/tslib';
+import { flatten } from '@beenotung/tslib/array';
 
 export function replaceRepeated<T>(xs: T[], x: T, replace: T[]): T[] {
   for (let i = 0; i < xs.length; i++) {
