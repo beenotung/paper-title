@@ -10,7 +10,16 @@ npm i -g paper-title
 
 ## Example
 ```bash
-echo 'S TRONGER C ONSISTENCY AND S EMANTICS FOR\nL OW -L ATENCY G EO -R EPLICATED S TORAGE' | xclip -sel clipboard
-paper-title
-# 'Stronger Consistency and Semantics for Low-Latency Geo-Replicated Storage'
+$ echo 'S TRONGER C ONSISTENCY AND S EMANTICS FOR\nL OW -L ATENCY G EO -R EPLICATED S TORAGE' | xclip -sel clipboard
+$ paper-title
+Reading from clipboard
+== Input ==
+S TRONGER C ONSISTENCY AND S EMANTICS FOR
+L OW -L ATENCY G EO -R EPLICATED S TORAGE
+
+===========
+== Output ==
+Stronger Consistency and Semantics for Low-Latency Geo-Replicated Storage
+============
+Saved to clipboard
 ```
