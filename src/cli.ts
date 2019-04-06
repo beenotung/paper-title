@@ -17,7 +17,7 @@ console.log('============');
 clipboardy
   .write(output)
   .then(() => {
-    console.log('Saved to clipboard');
+    console.log('Saved to clipboard.');
     process.exit(0);
   })
   .catch(e => {
