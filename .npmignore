@@ -1,4 +1,14 @@
-
 .idea/
+.editorconfig
+.prettierrc
+*.tgz
+test
 tsconfig.json
 tslint.json
+
+# src
+cli.ts
+
+# dist
+cli.d.ts
+cli.js.map
