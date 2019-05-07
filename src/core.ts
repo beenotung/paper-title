@@ -73,5 +73,5 @@ export function convertTitle(s: string): string {
     /* remove space before question mark */
     .replace(/ \?/g, '?');
 
-  return s;
+  return s[0].toUpperCase() + s.substring(1);
 }
