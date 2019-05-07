@@ -73,5 +73,8 @@ export function convertTitle(s: string): string {
     /* remove space before question mark */
     .replace(/ \?/g, '?');
 
-  return s[0].toUpperCase() + s.substring(1);
+  /* change first char in title to be uppercase */
+  s = s[0].toUpperCase() + s.substring(1);
+
+  return s;
 }

@@ -12,5 +12,10 @@ test('convert case', t => {
     convertTitle('CAN NEURAL NETWORKS UNDERSTAND LOGICAL ENTAILMENT ?'),
     'Can Neural Networks Understand Logical Entailment?',
   );
+  /* check if the first word is article, still display in upper case */
+  t.equal(
+    convertTitle('The Promise, and Limitations, of Gossip Protocols'),
+    'The Promise, and Limitations, of Gossip Protocols',
+  );
   t.end();
 });
