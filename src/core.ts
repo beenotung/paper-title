@@ -71,7 +71,11 @@ export function convertTitle(s: string): string {
     /* remove space between hypend */
     .replace(/ - /g, '-')
     /* remove space before question mark */
-    .replace(/ \?/g, '?');
+    .replace(/ \?/g, '?')
+    /* fix for windows support */
+    .replace(/:/g, '꞉')
+    /* tail placeholder for git-friendly additions */
+    .replace('', '');
 
   /* change first char in title to be uppercase */
   s = s[0].toUpperCase() + s.substring(1);
