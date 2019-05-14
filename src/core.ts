@@ -1,4 +1,6 @@
 import { flatten } from '@beenotung/tslib/array';
+import { between } from '@beenotung/tslib/logic';
+import { fixWindowsFilename } from './utils';
 
 export function replaceRepeated<T>(xs: T[], x: T, replace: T[]): T[] {
   for (let i = 0; i < xs.length; i++) {
@@ -49,15 +51,26 @@ export function convertTitle(s: string): string {
   }
 
   /* fix adjective case */
-  words = words.map(s => {
+  words = words.map((s, i) => {
     switch (s) {
       case 'For':
       case 'Of':
       case 'An':
       case 'A':
       case 'The':
-      case 'And':
-        return s.toLowerCase();
+      case 'And': {
+        let last = words[i - 1] || '';
+        last = last[last.length - 1] || '';
+        if (
+          between('0', last, '9') ||
+          between('A', last, 'Z') ||
+          between('a', last, 'z')
+        ) {
+          return s.toLowerCase();
+        } else {
+          return s;
+        }
+      }
       default:
         return s;
     }
@@ -72,10 +85,10 @@ export function convertTitle(s: string): string {
     .replace(/ - /g, '-')
     /* remove space before question mark */
     .replace(/ \?/g, '?')
-    /* fix for windows support */
-    .replace(/:/g, '꞉')
     /* tail placeholder for git-friendly additions */
     .replace('', '');
+
+  s = fixWindowsFilename(s);
 
   /* change first char in title to be uppercase */
   s = s[0].toUpperCase() + s.substring(1);
