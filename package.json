@@ -22,7 +22,7 @@
   "scripts": {
     "test": "npm run rawtest",
     "clean": "rimraf node_modules/@beenotung/tslib/index.* dist",
-    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\" && format-json-cli",
     "prebuild": "npm run clean",
     "build": "tsc",
     "pretest": "npm run format && npm run build",
@@ -33,7 +33,8 @@
     "test": "test"
   },
   "dependencies": {
-    "clipboardy": "^1.2.3"
+    "clipboardy": "^1.2.3",
+    "format-json-cli": "^1.0.2"
   },
   "devDependencies": {
     "@types/clipboardy": "^1.1.0",
