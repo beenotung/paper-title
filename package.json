@@ -2,7 +2,16 @@
   "name": "paper-title",
   "version": "1.0.4",
   "description": "Format academic paper title in clipboard",
-  "keywords": [],
+  "keywords": [
+    "cli",
+    "clipboard",
+    "format",
+    "paper-title",
+    "pdf",
+    "document",
+    "research",
+    "reading"
+  ],
   "author": "Beeno Tung <aabbcc1241@yahoo.com.hk> (https://beeno-tung.surge.sh)",
   "license": "BSD-2-Clause",
   "main": "dist/core.js",
