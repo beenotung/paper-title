@@ -23,7 +23,6 @@
     "test": "npm run rawtest",
     "clean": "rimraf node_modules/@beenotung/tslib/index.* dist",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "postformat": "tslint -p . --fix",
     "prebuild": "npm run clean",
     "build": "tsc",
     "pretest": "npm run format && npm run build",
