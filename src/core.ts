@@ -1,5 +1,3 @@
-import { flatten } from '@beenotung/tslib/array';
-import { between } from '@beenotung/tslib/logic';
 import { fixWindowsFilename } from './utils';
 
 export function replaceRepeated<T>(xs: T[], x: T, replace: T[]): T[] {
@@ -23,11 +21,11 @@ export function convertTitle(s: string): string {
   s = s.replace(/\n/g, ' ');
 
   /* split by hyphen */
-  let words = flatten(s.split('-').map(s => [s, '-']));
+  let words: string[] = s.split('-').flatMap(s => [s, '-']);
   words.pop();
 
   /* split by space */
-  words = flatten(words.map(s => s.split(' ')));
+  words = words.flatMap(s => s.split(' '));
   words = words.filter(s => s);
 
   /* fix broken words */
@@ -94,4 +92,8 @@ export function convertTitle(s: string): string {
   s = s[0].toUpperCase() + s.substring(1);
 
   return s;
+}
+
+function between(l: string, m: string, h: string): boolean {
+  return l <= m && m <= h;
 }
