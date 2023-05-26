@@ -21,7 +21,7 @@
   },
   "scripts": {
     "test": "npm run rawtest",
-    "clean": "rimraf node_modules/@beenotung/tslib/index.* dist",
+    "clean": "rimraf dist",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\" && format-json-cli",
     "prebuild": "npm run clean",
     "build": "tsc",
