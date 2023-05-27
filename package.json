@@ -1,6 +1,6 @@
 {
   "name": "paper-title",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Format academic paper title in clipboard",
   "keywords": [
     "cli",
