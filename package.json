@@ -20,14 +20,12 @@
     "paper-title": "dist/cli.js"
   },
   "scripts": {
-    "test": "npm run rawtest",
     "clean": "rimraf dist",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\" && format-json-cli",
-    "prebuild": "npm run clean",
-    "build": "tsc",
-    "pretest": "npm run format && npm run build",
-    "rawtest": "ts-node test/index.ts",
-    "prepublishOnly": "npm run rawtest && npm run build"
+    "build": "npm run clean && tsc",
+    "test": "npm run format && npm run build && npm run tape",
+    "tape": "ts-node test/index.ts",
+    "prepublishOnly": "npm run tape && npm run build"
   },
   "directories": {
     "test": "test"
