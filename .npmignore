@@ -5,9 +5,10 @@
 test
 tsconfig.json
 tslint.json
+*.tsbuildinfo
 
 # src
-cli.ts
+src/
 
 # dist
 cli.d.ts
