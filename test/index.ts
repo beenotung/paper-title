@@ -18,6 +18,10 @@ test('convert case', t => {
     'The Promise, and Limitations, of Gossip Protocols',
   );
   t.equal(
+    convertTitle('AC/DC: Input/Output Basics'),
+    'AC∕DC꞉ Input∕Output Basics',
+  );
+  t.equal(
     convertTitle(
       '' +
         'RepChain: A Reputation based Secure, Fast and\n' +
