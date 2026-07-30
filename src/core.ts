@@ -88,6 +88,8 @@ export function convertTitle(s: string): string {
 
   s = fixWindowsFilename(s);
 
+  if (!s) return s;
+
   /* change first char in title to be uppercase */
   s = s[0].toUpperCase() + s.substring(1);
 
