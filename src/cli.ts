@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import * as clipboardy from 'clipboardy';
+import clipboardy from 'clipboardy';
 import { convertTitle } from './core';
 
 console.log('Reading from clipboard');
